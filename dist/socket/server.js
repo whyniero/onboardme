@@ -6,7 +6,7 @@ import prisma from "../src/utils/prisma.js";
 const httpServer = createServer();
 const io = new Server(httpServer, {
     cors: {
-        origin: ["http://localhost:5173", "http://localhost:8080"],
+        origin: ["http://localhost:3000", "http://localhost:8080"],
         methods: ["GET", "POST", "PUT", "DELETE"],
     },
 });
