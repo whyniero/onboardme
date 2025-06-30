@@ -1,5 +1,7 @@
 import { Server } from "socket.io";
 import { createServer } from "http";
+import { config } from "dotenv";
+config();
 import prisma from "../src/utils/prisma.js";
 
 const httpServer = createServer();
