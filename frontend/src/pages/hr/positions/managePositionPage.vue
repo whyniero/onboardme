@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { onMounted, reactive, ref, watch } from 'vue';
+import { onMounted, reactive, ref } from 'vue';
 import TextCard from '../../../ui/TextCard.vue';
 import { useRoute, useRouter } from 'vue-router';
 import axios from '../../../utils/axios';
 import type { Position } from '../../../types/types';
+import { eventBus } from '../../../utils/eventBus';
 
 const router = useRouter()
 const route = useRoute()
@@ -76,6 +77,7 @@ async function updatePositionHandler(e: Event) {
   try {
     const res = await axios.put(`/positions/${positionId.value}`, managedPosition);
     if (res) {
+      eventBus.emit('reloadPositions');
       router.push('/positions');
     }
   } catch (err: any) {

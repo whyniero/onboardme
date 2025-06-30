@@ -5,8 +5,8 @@ import {
   getPosition,
   getPositions,
   updatePosition,
-} from "../controllers/positionController";
-import { authenticate } from "../hooks/authenticate";
+} from "../controllers/positionController.js";
+import { authenticate } from "../hooks/authenticate.js";
 
 export default async function (app: FastifyInstance) {
   app.get("/", { handler: getPositions });

@@ -1,6 +1,5 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import prisma from "../utils/prisma";
-import { Status } from "@prisma/client";
+import prisma from "../utils/prisma.js";
 
 export async function getTasks(
   request: FastifyRequest<{ Params: { stageId: string } }>,
@@ -180,7 +179,7 @@ export async function updateTask(
         name,
         desc: desc || undefined,
         deadline: deadline ? new Date(deadline) : undefined,
-        status: (status as Status) || undefined,
+        status: (status as  "NOT_STARTED" | "HAS_STARTED" | "DONE" | "EXPIRED") || undefined,
       },
     });
 
@@ -194,7 +193,7 @@ export async function updateTask(
 export async function updateTaskStatus(
   request: FastifyRequest<{
     Params: { stageId: string; id: string };
-    Body: { status: Status };
+    Body: { status: "NOT_STARTED" | "HAS_STARTED" | "DONE" | "EXPIRED" };
   }>,
   reply: FastifyReply
 ) {

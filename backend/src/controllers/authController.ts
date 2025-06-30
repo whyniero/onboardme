@@ -1,7 +1,6 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import { comparePasswords, hashPassword } from "../utils/authPassword";
-import prisma from "../utils/prisma";
-import { Role } from "@prisma/client";
+import { comparePasswords, hashPassword } from "../utils/authPassword.js";
+import prisma from "../utils/prisma.js";
 
 interface LoginBody {
   login: string;
@@ -13,7 +12,7 @@ interface UserResponse {
   login: string;
   name: string;
   email: string;
-  role: Role;
+  role: "HR" | "TEAMLEAD" | "INTERN";
 }
 
 export async function loginHandler(
@@ -116,7 +115,7 @@ export async function registerHandler(
         name,
         email,
         password: hashedPassword,
-        role: Role.HR,
+        role: "HR",
         avatar: avatar ?? null,
       },
     });

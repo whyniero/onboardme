@@ -1,6 +1,5 @@
-import { hashPassword } from "../utils/authPassword";
-import prisma from "../utils/prisma";
-import { Role } from "@prisma/client";
+import { hashPassword } from "../utils/authPassword.js";
+import prisma from "../utils/prisma.js";
 import { FastifyReply, FastifyRequest } from "fastify";
 
 export async function getInterns(request: FastifyRequest, reply: FastifyReply) {
@@ -79,7 +78,7 @@ interface AddInternBody {
   email: string;
   password: string;
   avatar?: string;
-  role: Role;
+  role: "HR" | "TEAMLEAD" | "INTERN";
   positionId?: string;
   mentorId?: string;
 }
@@ -123,7 +122,7 @@ export async function addIntern(
         name,
         email,
         password: hashedPassword,
-        role: Role.INTERN,
+        role: "INTERN",
         avatar: avatar ?? null,
         positionId: positionId ?? null,
         mentorId: mentorId ?? null,

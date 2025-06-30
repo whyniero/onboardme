@@ -1,5 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import prisma from "../utils/prisma";
+import prisma from "../utils/prisma.js";
 
 export async function getStages(request: FastifyRequest, reply: FastifyReply) {
   try {

@@ -1,25 +1,27 @@
 import Fastify, { FastifyInstance } from "fastify";
 import dotenv from "dotenv";
-import cookiePlugin from "./plugins/cookiePlugin";
-import jwtPlugin from "./plugins/jwtPlugin";
-import authRoutes from "./routes/authRoutes";
-import userRoutes from "./routes/userRoutes";
+import cookiePlugin from "./plugins/cookiePlugin.js";
+import jwtPlugin from "./plugins/jwtPlugin.js";
+import authRoutes from "./routes/authRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 import fastifyMultipart from "@fastify/multipart";
-// import { createServer } from "http";
-// import { initSocketIo } from "./utils/socket";
-import chatRoutes from "./routes/chatRoutes";
-import positionRoutes from "./routes/positionRoutes";
-import messageRoutes from "./routes/messageRoutes";
-import corsPlugin from "./plugins/corsPlugin";
+import chatRoutes from "./routes/chatRoutes.js";
+import positionRoutes from "./routes/positionRoutes.js";
+import messageRoutes from "./routes/messageRoutes.js";
+import corsPlugin from "./plugins/corsPlugin.js";
 import fastifyStatic from "@fastify/static";
-import path from "path";
-import stageRoutes from "./routes/stageRoutes";
-import downloadRoutes from "./routes/downloadRoutes";
-import taskRoutes from "./routes/taskRoutes";
+import path, { dirname } from "path";
+import stageRoutes from "./routes/stageRoutes.js";
+import downloadRoutes from "./routes/downloadRoutes.js";
+import taskRoutes from "./routes/taskRoutes.js";
+import { fileURLToPath } from "url";
 
 const app: FastifyInstance = Fastify({
   logger: true,
 });
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 dotenv.config();
 

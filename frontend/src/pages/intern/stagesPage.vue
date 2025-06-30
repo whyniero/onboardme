@@ -14,20 +14,13 @@ interface Stage {
   internId?: string;
 }
 
-interface CurrentUser {
-  id: string;
-  name: string;
-  role: string;
-  token?: string;
-}
-
 const stages = ref<Stage[]>([]);
 const loading = ref<boolean>(true);
 const error = ref<string | null>(null);
 
 const userStore = useUserStore();
 const internId = computed(() => userStore.currentUser?.id || null);
-const internName = computed(() => (userStore.currentUser as CurrentUser)?.name || 'Неизвестно');
+const internName = computed(() => userStore.currentUser?.name || 'Неизвестно');
 
 async function fetchStages() {
   if (!internId.value) {
@@ -59,9 +52,10 @@ async function fetchStages() {
   }
 }
 
-onMounted(() => {
-  fetchStages();
+onMounted(async () => {
+  await fetchStages();
 });
+
 
 // Управление видимостью заданий
 const showTasks = (index: number): void => {

@@ -3,6 +3,7 @@ import axios from '../../../utils/axios';
 import { onMounted, reactive, ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import type { Intern, Stage, Teamlead } from '../../../types/types';
+import { eventBus } from '../../../utils/eventBus';
 
 const route = useRoute();
 const router = useRouter();
@@ -92,6 +93,7 @@ async function deleteStage() {
       console.log("Stage deleted response:", res.data);
       if (res.status === 200) {
         successMessage.value = "Этап успешно удален!";
+        eventBus.emit('reloadStages');
         router.push('/control');
       }
     } catch (err: any) {
@@ -135,6 +137,7 @@ async function updateStageHandler(e: Event) {
 
     if (res.status === 200) {
       successMessage.value = "Этап успешно обновлен!";
+      eventBus.emit('reloadStages');
     }
   } catch (err: any) {
     error.value = err.response?.data.message ?? "Ошибка при обновлении этапа";

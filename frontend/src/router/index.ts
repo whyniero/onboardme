@@ -186,7 +186,7 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _, next) => {
   const userStore = useUserStore();
   const isAuth = userStore.isAuthenticated;
   const userRole = userStore.userRole;

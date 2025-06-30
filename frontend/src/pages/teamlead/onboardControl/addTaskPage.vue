@@ -3,6 +3,7 @@ import axios from '../../../utils/axios';
 import { onMounted, reactive, ref, computed, watch } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 import type { Stage, Task } from '../../../types/types';
+import { eventBus } from '../../../utils/eventBus';
 
 const router = useRouter();
 const route = useRoute();
@@ -110,7 +111,8 @@ async function createTaskHandler(e: Event) {
     if (res.status === 201) {
       createdTask.value = res.data.task;
       successMessage.value = `Задача создана! Номер задачи: ${createdTask.value?.number}`;
-      // Перенаправляем на страницу этапа с соответствующим stageId
+
+      eventBus.emit('reloadStages');
       router.push('/control');
     }
   } catch (err: any) {

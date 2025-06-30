@@ -62,7 +62,7 @@ model Intern {
   role Role
 
   position Position? @relation(fields: [positionId], references: [id])
-  teamlead Teamlead? @relation(fields: [mentorId], references: [id])
+  teamlead Teamlead? @relation(fields: [mentorId], references: [id], onDelete: SetNull)
   Stage    Stage[]
 }
 

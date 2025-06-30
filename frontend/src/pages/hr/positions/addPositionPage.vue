@@ -3,6 +3,7 @@ import { reactive, ref, watch } from 'vue';
 import TextCard from '../../../ui/TextCard.vue';
 import { useRouter } from 'vue-router';
 import axios from '../../../utils/axios';
+import { eventBus } from '../../../utils/eventBus';
 
 const router = useRouter()
 const error = ref<string | null>(null)
@@ -22,7 +23,7 @@ async function addPositionHandler(e: Event) {
     })
 
     if (position) {
-      console.log(position)
+      eventBus.emit('reloadPositions');
       router.push("/positions")
     }
 
@@ -100,13 +101,14 @@ watch(newPosition, () => {
   flex-direction: column;
 
 }
+
 h2 {
   text-align: center;
   padding: 0 0 12px 0;
 }
 
 h4 {
-  
+
   margin-top: 40px;
 }
 

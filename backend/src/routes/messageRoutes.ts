@@ -4,9 +4,9 @@ import {
   getMessages,
   sendMessage,
   updateMessage,
-} from "../controllers/messageController";
-import { authenticate } from "../hooks/authenticate";
-import { uploadFile } from "../controllers/messageController";
+} from "../controllers/messageController.js";
+import { authenticate } from "../hooks/authenticate.js";
+import { uploadFile } from "../controllers/messageController.js";
 
 export default async function (app: FastifyInstance) {
   app.get("/:chatId/messages", {

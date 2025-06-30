@@ -3,11 +3,12 @@ import router from '../../../router';
 import TextCard from '../../../ui/TextCard.vue';
 import EditIcon from "../../../assets/icons/edit.svg"
 import ChatIcon from "../../../assets/icons/chat.svg"
-import { onBeforeRouteUpdate, RouterLink } from 'vue-router';
-import { onMounted, ref } from 'vue';
+import { RouterLink } from 'vue-router';
+import { onBeforeUnmount, onMounted, ref } from 'vue';
 import type { Intern } from '../../../types/types';
 import axios from '../../../utils/axios';
 import Loader from '../../../components/Loader.vue';
+import { eventBus } from '../../../utils/eventBus';
 
 
 // const interns = [
@@ -83,14 +84,20 @@ async function getInternsHandler() {
   try {
     const res = await axios.get("/users/interns")
     interns.value = res.data.interns
-    isLoading.value = false
   } catch (err) {
     console.error(err)
+  } finally {
+    isLoading.value = false
   }
 }
 
 onMounted(async () => {
   await getInternsHandler()
+  eventBus.on('reloadInterns', getInternsHandler);
+})
+
+onBeforeUnmount(() => {
+  eventBus.off('reloadInterns', getInternsHandler);
 })
 
 const linkToIntern = (id: string) => {
@@ -178,9 +185,9 @@ const linkToIntern = (id: string) => {
 
 <style scoped>
 .internsPage {
-  width: 100%;
+  overflow-y: auto;
+  max-height: calc(100vh - 24px);
 }
-
 
 .buttons {
   padding-top: 20px;

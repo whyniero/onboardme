@@ -1,16 +1,11 @@
 <script setup lang="ts">
-import { onMounted, reactive, ref } from 'vue';
+import { onBeforeUnmount, onMounted, ref } from 'vue';
 import TextCard from '../../../ui/TextCard.vue';
 import axios from '../../../utils/axios';
 import EditIcon from "../../../assets/icons/edit.svg"
+import type { Position } from '../../../types/types';
+import { eventBus } from '../../../utils/eventBus';
 
-
-interface Position {
-  id: string;
-  name: string;
-  color: string;
-  createdAt: Date;
-}
 
 const positions = ref<Position[] | null>(null)
 
@@ -27,8 +22,13 @@ async function getPositions() {
 
 onMounted(async () => {
   await getPositions();
-
+  eventBus.on('reloadPositions', getPositions);
 });
+
+onBeforeUnmount(() => {
+  eventBus.off('reloadPositions', getPositions);
+})
+
 
 
 </script>

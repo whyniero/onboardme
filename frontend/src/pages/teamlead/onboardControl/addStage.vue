@@ -3,6 +3,7 @@ import axios from '../../../utils/axios';
 import { onMounted, reactive, ref, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import type { Intern, Stage, Teamlead } from '../../../types/types';
+import { eventBus } from '../../../utils/eventBus';
 
 const router = useRouter();
 const error = ref<string | null>(null);
@@ -96,6 +97,7 @@ async function createStageHandler(e: Event) {
     });
 
     if (res.status === 201) {
+      eventBus.emit('reloadStages');
       router.push("/control");
     }
   } catch (err: any) {

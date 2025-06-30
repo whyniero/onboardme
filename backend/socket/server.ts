@@ -1,13 +1,13 @@
 import { Server } from "socket.io";
 import { createServer } from "http";
-import prisma from "../src/utils/prisma";
+import prisma from "../src/utils/prisma.js";
 
 const httpServer = createServer();
 
 const io = new Server(httpServer, {
   cors: {
     origin: ["http://localhost:5173", "http://localhost:8080"],
-    methods: ["GET", "POST", "PUT"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
   },
 });
 
@@ -23,15 +23,17 @@ const addUser = (userId: string, socketId: string) => {
   } else {
     onlineUsers.push({ userId, socketIds: [socketId] });
   }
-  console.log("👥 Online users updated:", onlineUsers);
+  console.log(" Online users updated:", onlineUsers);
 };
 
 const removeUser = (socketId: string) => {
-  onlineUsers = onlineUsers.map((u) => {
-    u.socketIds = u.socketIds.filter((id) => id !== socketId);
-    return u;
-  }).filter((u) => u.socketIds.length > 0);
-  console.log("👥 Online users after disconnect:", onlineUsers);
+  onlineUsers = onlineUsers
+    .map((u) => {
+      u.socketIds = u.socketIds.filter((id) => id !== socketId);
+      return u;
+    })
+    .filter((u) => u.socketIds.length > 0);
+  console.log("Online users after disconnect:", onlineUsers);
 };
 
 const getUser = (userId: string) => {
@@ -39,7 +41,7 @@ const getUser = (userId: string) => {
 };
 
 io.on("connection", (socket) => {
-  console.log("🔌 Socket connected:", socket.id);
+  console.log("Socket connected:", socket.id);
 
   socket.on("newUser", (userId: string) => {
     addUser(userId, socket.id);
@@ -50,9 +52,9 @@ io.on("connection", (socket) => {
     // Проверяем, не подключен ли уже к этому chatId
     if (!socket.rooms.has(chatId)) {
       socket.join(chatId);
-      console.log(`👥 User ${socket.id} joined chat ${chatId}`);
+      console.log(`User ${socket.id} joined chat ${chatId}`);
     } else {
-      console.log(`⚠️ User ${socket.id} already in chat ${chatId}, skipping join`);
+      console.log(`User ${socket.id} already in chat ${chatId}, skipping join`);
     }
   });
 
@@ -60,7 +62,7 @@ io.on("connection", (socket) => {
     const { chatId, senderId, senderRole, content } = data;
 
     if (!chatId || !senderId || !content) {
-      console.error("❌ Invalid message data:", data);
+      console.error("Invalid message data:", data);
       if (callback) callback({ error: "Missing required fields" });
       return;
     }
@@ -78,7 +80,7 @@ io.on("connection", (socket) => {
       io.to(chatId).emit("getMessage", message);
       if (callback) callback({ success: true, messageId: message.id });
     } catch (err) {
-      console.error("❌ Socket message error:", err);
+      console.error("Socket message error:", err);
       if (callback) callback({ error: "Failed to send message" });
     }
   });
@@ -102,7 +104,7 @@ io.on("connection", (socket) => {
       });
       if (callback) callback({ success: true });
     } catch (err) {
-      console.error("❌ Edit message error:", err);
+      console.error("Edit message error:", err);
       if (callback) callback({ error: "Failed to edit message" });
     }
   });
@@ -122,16 +124,16 @@ io.on("connection", (socket) => {
       io.to(chatId).emit("messageDeleted", { messageId });
       if (callback) callback({ success: true });
     } catch (err) {
-      console.error("❌ Delete message error:", err);
+      console.error("Delete message error:", err);
       if (callback) callback({ error: "Failed to delete message" });
     }
   });
 
   socket.on("disconnect", () => {
-    console.log("❌ Socket disconnected:", socket.id);
+    console.log("Socket disconnected:", socket.id);
     removeUser(socket.id);
     io.emit("getOnlineUsers", onlineUsers); // Обновляем список после отключения
   });
 });
 
-httpServer.listen(4000, () => console.log("✅ Socket server running on :4000"));
+httpServer.listen(4000, () => console.log("Socket server running on :4000"));

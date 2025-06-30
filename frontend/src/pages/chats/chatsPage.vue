@@ -5,25 +5,15 @@ import { RouterLink, useRouter } from 'vue-router';
 import axios from '../../utils/axios';
 import { useUserStore } from '../../stores/user';
 import Loader from '../../components/Loader.vue';
+import type { Role } from '../../types/types';
 
 const router = useRouter();
-
-// Интерфейсы
-interface User {
-  id: string;
-  name: string;
-  login: string;
-  position: string;
-  role: string;
-  img?: string;
-  lastMessage?: string;
-}
 
 interface ChatParticipantData {
   id: string;
   name: string;
   avatar?: string | null;
-  role: 'HR' | 'TEAMLEAD' | 'INTERN';
+  role: Role;
   position?: string | null;
 }
 
@@ -143,16 +133,11 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="chatPage">
+  <div class="chatsPage">
     <div class="chats dark-blue-container">
       <h2>Чаты</h2>
-      <input
-        type="text"
-        v-model="searchQuery"
-        @input="debouncedSearchUsersHandler"
-        placeholder="Поиск пользователей"
-        class="search-input"
-      />
+      <input type="text" v-model="searchQuery" @input="debouncedSearchUsersHandler" placeholder="Поиск пользователей"
+        class="search-input" />
 
       <Loader v-if="isLoading || isSearching" />
 
@@ -163,23 +148,14 @@ onMounted(async () => {
 
       <template v-else>
         <!-- Сначала чаты -->
-        <RouterLink
-          v-for="chat in filteredChats"
-          :key="chat.id"
-          :to="`/chats/${chat.id}`"
-          class="chat"
-        >
+        <RouterLink v-for="chat in filteredChats" :key="chat.id" :to="`/chats/${chat.id}`" class="chat">
           <img :src="chat.participants[0]?.avatar || '/img/noimage.jpg'" />
           <div class="content">
             <div class="profile">
               <div class="name">
                 {{ chat.groupName || chat.participants[0]?.name || 'Без имени' }}
               </div>
-              <TextCard
-                v-if="chat.participants[0]?.position"
-                :text="chat.participants[0].position"
-                color="#0075FF"
-              />
+              <TextCard v-if="chat.participants[0]?.position" :text="chat.participants[0].position" color="#0075FF" />
               <TextCard :text="chat.participants[0]?.role" color="#adff2f" />
             </div>
             <div class="last-msg" v-if="chat.lastMessage">
@@ -189,12 +165,7 @@ onMounted(async () => {
         </RouterLink>
 
         <!-- Затем пользователи без чата -->
-        <div
-          v-for="user in filteredSearchResults"
-          :key="user.id"
-          class="chat"
-          @click="goToOrCreateChat(user)"
-        >
+        <div v-for="user in filteredSearchResults" :key="user.id" class="chat" @click="goToOrCreateChat(user)">
           <img :src="user.avatar || '/img/noimage.jpg'" />
           <div class="content">
             <div class="profile">
@@ -210,6 +181,11 @@ onMounted(async () => {
 </template>
 
 <style scoped>
+.chatsPage {
+  overflow-y: auto;
+  max-height: calc(100vh - 24px);
+}
+
 .chats {
   display: flex;
   flex-direction: column;

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue';
-import TextCard from '../../../ui/TextCard.vue';
+import { ref, onMounted, computed, onBeforeUnmount } from 'vue';
 import { RouterLink } from 'vue-router';
 import Loader from '../../../components/Loader.vue';
-import type { Intern } from "../../../types/types"; // Убрали Stage, определим локально
+import type { Intern } from "../../../types/types";
 import axios from '../../../utils/axios';
 import StatusCard from '../../../ui/StatusCard.vue';
+import { eventBus } from '../../../utils/eventBus';
 
 // Определение типа Stage и Task, совместимых с данными бэкенда
 interface Task {
@@ -14,7 +14,7 @@ interface Task {
   name: string;
   status: string;
   deadline: Date | string | null;
-  stageId: string; // Ожидаем строку
+  stageId: string;
 }
 
 interface Stage {
@@ -86,7 +86,12 @@ const getSortedTasks = (tasks: Task[] | undefined): Task[] => {
 
 onMounted(async () => {
   await getStages();
+  eventBus.on('reloadStages', getStages);
 });
+
+onBeforeUnmount(() => {
+  eventBus.off('reloadStages', getStages);
+})
 </script>
 
 <template>
@@ -187,6 +192,8 @@ onMounted(async () => {
 
 <style scoped>
 .onboardingControlPage {
+  overflow-y: auto;
+  max-height: calc(100vh - 24px);
   width: 100%;
   color: #fff;
   display: flex;

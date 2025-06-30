@@ -3,6 +3,7 @@ import axios from '../../../utils/axios';
 import { onMounted, reactive, ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import type { Position, Teamlead } from '../../../types/types';
+import { eventBus } from '../../../utils/eventBus';
 
 const route = useRoute();
 const router = useRouter();
@@ -95,6 +96,7 @@ async function updateInternHandler(e: Event) {
   try {
     const res = await axios.put(`/users/interns/${internId}`, intern);
     if (res.status === 200) {
+      eventBus.emit('reloadInterns');
       router.push("/interns");
     }
   } catch (err: any) {
@@ -110,6 +112,7 @@ async function deleteInternHandler() {
   try {
     const res = await axios.delete(`/users/interns/${internId}`);
     if (res.status === 200) {
+      eventBus.emit('reloadInterns');
       router.push("/interns");
     }
   } catch (err: any) {

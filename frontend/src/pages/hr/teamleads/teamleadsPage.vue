@@ -3,10 +3,11 @@ import router from '../../../router';
 import TextCard from '../../../ui/TextCard.vue';
 import EditIcon from "../../../assets/icons/edit.svg"
 import ChatIcon from "../../../assets/icons/chat.svg"
-import { onBeforeRouteUpdate, RouterLink } from 'vue-router';
-import { onMounted, ref } from 'vue';
+import { RouterLink } from 'vue-router';
+import { onBeforeUnmount, onMounted, ref } from 'vue';
 import axios from '../../../utils/axios';
 import Loader from '../../../components/Loader.vue';
+import { eventBus } from '../../../utils/eventBus';
 
 // Определение типов на основе контроллера
 interface Position {
@@ -52,6 +53,11 @@ async function getTeamleadsHandler() {
 
 onMounted(async () => {
   await getTeamleadsHandler()
+  eventBus.on('reloadTeamleads', getTeamleadsHandler);
+})
+
+onBeforeUnmount(() => {
+  eventBus.off('reloadTeamleads', getTeamleadsHandler);
 })
 
 const linkToTeamlead = (id: string) => {
@@ -131,9 +137,9 @@ const linkToTeamlead = (id: string) => {
 </template>
 
 <style scoped>
-.teamleadsPage {
-  width: 100%;
-}
+/* .teamleadsPage {
+ 
+} */
 
 .buttons {
   padding-top: 20px;
@@ -165,6 +171,8 @@ const linkToTeamlead = (id: string) => {
 }
 
 .teamleads-table {
+   overflow-y: auto;
+  max-height: calc(100vh - 24px);
   border-collapse: collapse;
   margin: 0;
   width: 100%;

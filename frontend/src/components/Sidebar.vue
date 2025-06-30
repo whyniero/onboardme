@@ -2,6 +2,9 @@
 import HomeIcon from "../assets/icons/home.svg"
 import PeopleIcon from "../assets/icons/people.svg"
 import ChatIcon from "../assets/icons/chat.svg"
+import PositionsIcon from "../assets/icons/positions.svg"
+import OnboardingIcon from "../assets/icons/onboarding.svg"
+import ControlIcon from "../assets/icons/control.svg"
 import { useRoute, useRouter } from "vue-router"
 import { computed, ref } from "vue"
 import { useUserStore } from "../stores/user"
@@ -17,13 +20,13 @@ const hrLinks = [
   {
     id: 6,
     content: "Тимлиды",
-    icon: ChatIcon,
+    icon: PeopleIcon,
     path: "/teamleads"
   },
   {
     id: 5,
     content: "Должности",
-    icon: ChatIcon,
+    icon: PositionsIcon,
     path: "/positions"
   },
   {
@@ -41,7 +44,7 @@ const hrLinks = [
   {
     id: 4,
     content: "Управление Онбордингами",
-    icon: ChatIcon,
+    icon: ControlIcon,
     path: "/control"
   },
 ]
@@ -83,7 +86,7 @@ const internLinks = [
   {
     id: 2,
     content: "Онбординг",
-    icon: ChatIcon,
+    icon: OnboardingIcon,
     path: "/stages"
   },
   {

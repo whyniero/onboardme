@@ -2,7 +2,8 @@
 import axios from '../../../utils/axios';
 import { onMounted, reactive, ref, computed, watch } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-import type { Stage, Task } from '../../../types/types';
+import type { Stage } from '../../../types/types';
+import { eventBus } from '../../../utils/eventBus';
 
 const router = useRouter();
 const route = useRoute();
@@ -13,7 +14,7 @@ const stages = ref<Stage[] | null>(null);
 const tasksCount = ref<Record<string, number>>({});
 
 const initialStageId = route.params.stageId as string | undefined;
-const taskId = route.params.id as string | undefined; // Изменили на | undefined для безопасности
+const taskId = route.params.id as string | undefined;
 
 // Инициализируем taskForm с начальными значениями
 const taskForm = reactive({
@@ -89,6 +90,8 @@ async function deleteTask() {
       console.log("Task deleted:", res.data);
       if (res.status === 200) {
         successMessage.value = "Задача успешно удалена!";
+
+        eventBus.emit('reloadStages');
         router.push('/control');
       }
     } catch (err: any) {
@@ -161,10 +164,9 @@ async function updateTaskHandler(e: Event) {
       deadline,
       status,
     });
-    console.log("Task updated:", res.data.task);
 
     if (res.status === 200) {
-      successMessage.value = `Задача обновлена! Номер задачи: ${taskForm.number}`;
+      eventBus.emit('reloadStages');
     }
   } catch (err: any) {
     error.value = err.response?.data.message ?? "Ошибка при обновлении задачи";

@@ -8,8 +8,8 @@ import {
   getFormattedChatById,
   searchUsers,
   updateChat,
-} from "../controllers/chatController";
-import { authenticate } from "../hooks/authenticate";
+} from "../controllers/chatController.js";
+import { authenticate } from "../hooks/authenticate.js";
 
 export default async function (app: FastifyInstance) {
   app.get("/", { handler: getChats, preHandler: authenticate });

@@ -1,15 +1,18 @@
 import fsPromises from "fs/promises";
 import fs from "fs";
 import { FastifyReply, FastifyRequest } from "fastify";
-import prisma from "../utils/prisma";
-import { Role } from "@prisma/client";
+import prisma from "../utils/prisma.js";
 import path from "path";
 import { v4 as uuidv4 } from "uuid";
 import { io } from "socket.io-client";
+import { fileURLToPath } from "url";
 
 const socket = io("http://localhost:4000", {
   withCredentials: false,
 });
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export async function getMessages(
   request: FastifyRequest<{ Params: { chatId: string } }>,
@@ -35,7 +38,7 @@ export async function sendMessage(
     Params: { chatId: string };
     Body: {
       senderId: string;
-      senderRole: Role;
+      senderRole: "HR" | "TEAMLEAD" | "INTERN";
       content: string;
     };
   }>,
@@ -121,7 +124,7 @@ export async function uploadFile(
     }
 
     // Приведение senderRole к типу Role
-    const role: Role = senderRole.value as Role;
+    const role = senderRole.value as "HR" | "TEAMLEAD" | "INTERN";
 
     // Генерируем уникальное имя файла на основе messageId
     const messageId = uuidv4();

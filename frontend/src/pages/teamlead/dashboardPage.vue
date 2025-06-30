@@ -40,7 +40,7 @@ const internsOptions = ref({
           offsetY: -10,
           fontSize: '24px',
           fontWeight: 700,
-          formatter: val => `${val}%`
+          formatter: (val: number) => `${val}%`
         }
       }
     }

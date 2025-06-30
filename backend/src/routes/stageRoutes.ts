@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import { authenticate } from "../hooks/authenticate";
+import { authenticate } from "../hooks/authenticate.js";
 import {
   addStage,
   deleteStage,
@@ -7,7 +7,7 @@ import {
   getStages,
   updateStage,
   getStagesForIntern,
-} from "../controllers/stageController";
+} from "../controllers/stageController.js";
 
 export default async function (app: FastifyInstance) {
   app.get("/", { handler: getStages });

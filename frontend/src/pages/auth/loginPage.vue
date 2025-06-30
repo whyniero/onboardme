@@ -36,7 +36,6 @@ async function loginHandler(e: Event) {
   }
 }
 
-
 </script>
 
 <template>

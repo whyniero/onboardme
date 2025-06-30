@@ -1,7 +1,6 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { hashPassword } from "../utils/authPassword";
-import prisma from "../utils/prisma";
-import { Role } from "@prisma/client";
+import { hashPassword } from "../utils/authPassword.js";
+import prisma from "../utils/prisma.js";
 
 export async function getTeamleads(
   request: FastifyRequest,
@@ -123,7 +122,7 @@ export async function addTeamlead(
         email,
         password: hashedPassword,
         positionId,
-        role: Role.TEAMLEAD,
+        role: "TEAMLEAD",
         avatar: avatar || null,
       },
     });

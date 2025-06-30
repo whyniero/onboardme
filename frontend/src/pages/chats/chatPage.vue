@@ -12,8 +12,8 @@ import axios from '../../utils/axios';
 import { useUserStore } from '../../stores/user';
 import Loader from '../../components/Loader.vue';
 import { io } from 'socket.io-client';
+import type { Role } from '../../types/types';
 
-// Интерфейсы
 interface Message {
   id: string;
   content: string; // URL файла или текст
@@ -28,7 +28,7 @@ interface ChatParticipantData {
   id: string;
   name: string;
   avatar?: string | null;
-  role: 'HR' | 'TEAMLEAD' | 'INTERN';
+  role: Role;
   position?: string | null;
 }
 
@@ -398,23 +398,13 @@ watch(messages, scrollToBottom);
   <div class="chatPage">
     <div class="sidebar-chat dark-blue-container">
       <h4>Чаты</h4>
-      <input
-        type="text"
-        v-model="searchQuery"
-        @input="debouncedSearchUsersHandler"
-        placeholder="Поиск пользователей"
-        class="search-input"
-      />
+      <input type="text" v-model="searchQuery" @input="debouncedSearchUsersHandler" placeholder="Поиск пользователей"
+        class="search-input" />
       <Loader v-if="isLoading || isSearching" />
       <div class="mini-chats" v-else>
         <!-- Отображение отфильтрованных чатов -->
-        <div
-          v-for="chat in filteredChats"
-          :key="chat.id"
-          class="mini-chat"
-          :class="{ active: chat.id === selectedChatId }"
-          @click="selectChat(chat.id)"
-        >
+        <div v-for="chat in filteredChats" :key="chat.id" class="mini-chat"
+          :class="{ active: chat.id === selectedChatId }" @click="selectChat(chat.id)">
           <img :src="chat.participants[0]?.avatar || '/img/noimage.jpg'" alt="" />
           <div class="content">
             <div class="name">
@@ -429,12 +419,7 @@ watch(messages, scrollToBottom);
           </div>
         </div>
         <!-- Отображение пользователей без чата -->
-        <div
-          v-for="user in filteredSearchResults"
-          :key="user.id"
-          class="mini-chat"
-          @click="goToOrCreateChat(user)"
-        >
+        <div v-for="user in filteredSearchResults" :key="user.id" class="mini-chat" @click="goToOrCreateChat(user)">
           <img :src="user.avatar || '/img/noimage.jpg'" alt="" />
           <div class="content">
             <div class="name">{{ user.name }}</div>
@@ -462,13 +447,9 @@ watch(messages, scrollToBottom);
 
       <div class="chat-container dark-blue-container">
         <div class="messages">
-          <div
-            v-for="message in messages"
-            :key="message.id"
+          <div v-for="message in messages" :key="message.id"
             :class="['message', { sent: message.senderId === currentUserId, received: message.senderId !== currentUserId }]"
-            @mouseover="hoveredMessage = message.id"
-            @mouseleave="hoveredMessage = null"
-          >
+            @mouseover="hoveredMessage = message.id" @mouseleave="hoveredMessage = null">
             <div v-if="message.content.includes('/uploads/')" class="file-message">
               <a :href="getDownloadUrl(message.content)" download class="file-link">
                 <FileIcon />

@@ -3,6 +3,7 @@ import axios from '../../../utils/axios';
 import { onMounted, reactive, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import type { Position } from '../../../types/types';
+import { eventBus } from '../../../utils/eventBus';
 
 const router = useRouter();
 const error = ref<string | null>(null);
@@ -68,6 +69,7 @@ async function addTeamleadHandler(e: Event) {
   try {
     const res = await axios.post("/users/teamleads", registerTeamlead);
     if (res.status === 201 || res.status === 200) {
+      eventBus.emit('reloadTeamleads');
       router.push("/teamleads");
     }
   } catch (err: any) {

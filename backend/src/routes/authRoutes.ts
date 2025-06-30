@@ -3,7 +3,7 @@ import {
   loginHandler,
   logoutHandler,
   registerHandler,
-} from "../controllers/authController";
+} from "../controllers/authController.js";
 
 export default async function (app: FastifyInstance) {
   app.post("/login", { handler: loginHandler });

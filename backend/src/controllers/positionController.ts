@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import prisma from "../utils/prisma";
+import prisma from "../utils/prisma.js";
 
 export async function getPositions(
   request: FastifyRequest,

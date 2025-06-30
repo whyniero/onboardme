@@ -1,6 +1,5 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import prisma from "../utils/prisma";
-import { Role } from "@prisma/client";
+import prisma from "../utils/prisma.js";
 import { io } from "socket.io-client"; // Подключим клиент Socket.IO
 
 const socket = io("http://localhost:4000", {
@@ -73,13 +72,13 @@ export async function getChatsForUser(
     }
 
     const formattedChats = await Promise.all(
-      chats.map(async (chat) => {
+      chats.map(async (chat: any) => {
         const otherParticipants = chat.participants.filter(
-          (p) => p.userId !== userId
+          (p: any) => p.userId !== userId
         );
 
         const users = await Promise.all(
-          otherParticipants.map(async (p) => {
+          otherParticipants.map(async (p: any) => {
             let userData: any = null;
 
             switch (p.role) {
@@ -143,7 +142,7 @@ export async function getChatsForUser(
 }
 
 interface AddChatBody {
-  participants: { userId: string; role: Role }[];
+  participants: { userId: string; role: "HR" | "TEAMLEAD" | "INTERN" }[];
   groupName?: string;
 }
 
@@ -182,7 +181,7 @@ export async function addChat(
 
 interface UpdateChatBody {
   groupName?: string;
-  participants?: { userId: string; role: Role }[];
+  participants?: { userId: string; role: "HR" | "TEAMLEAD" | "INTERN" }[];
 }
 
 export async function updateChat(
@@ -379,7 +378,7 @@ export async function getFormattedChatById(
     }
 
     const users = await Promise.all(
-      chat.participants.map(async (p) => {
+      chat.participants.map(async (p: any) => {
         let userData: any = null;
 
         switch (p.role) {

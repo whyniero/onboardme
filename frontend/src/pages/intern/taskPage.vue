@@ -32,13 +32,6 @@ interface Task {
   comments: { id: string; content: string; senderId: string; senderRole: string }[];
 }
 
-interface CurrentUser {
-  id: string;
-  name: string;
-  role: string;
-  token?: string;
-}
-
 const route = useRoute();
 const router = useRouter();
 const task = ref<Task | null>(null);
@@ -47,7 +40,6 @@ const error = ref<string | null>(null);
 
 const userStore = useUserStore();
 const internId = computed(() => userStore.currentUser?.id || null);
-const internName = computed(() => (userStore.currentUser as CurrentUser)?.name || 'Неизвестно');
 
 const stageId = computed(() => route.params.stageId as string);
 const taskId = computed(() => route.params.id as string);
