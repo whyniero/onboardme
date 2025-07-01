@@ -1,0 +1,183 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// ... (существующие генераторы и datasource)
+
+model Hr {
+  id         String    @id @default(uuid())
+  login      String    @unique
+  email      String    @unique
+  name       String
+  password   String
+  avatar     String?
+  lastOnline DateTime?
+  createdAt  DateTime  @default(now())
+
+  role Role
+}
+
+model Teamlead {
+  id         String    @id @default(uuid())
+  login      String    @unique
+  email      String    @unique
+  name       String
+  password   String
+  avatar     String?
+  lastOnline DateTime?
+  createdAt  DateTime  @default(now())
+
+  positionId String?
+
+  role           Role
+  responsibleFor Intern[]
+
+  position Position? @relation(fields: [positionId], references: [id])
+  Stage    Stage[]
+}
+
+model Intern {
+  id         String    @id @default(uuid())
+  login      String    @unique
+  email      String    @unique
+  password   String
+  name       String
+  avatar     String?
+  lastOnline DateTime?
+  createdAt  DateTime  @default(now())
+  positionId String?
+  mentorId   String?
+
+  role Role
+
+  position Position? @relation(fields: [positionId], references: [id])
+  teamlead Teamlead? @relation(fields: [mentorId], references: [id], onDelete: SetNull)
+  Stage    Stage[]
+}
+
+model Position {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  color     String   @unique
+  createdAt DateTime @default(now())
+
+  interns  Intern[]
+  Teamlead Teamlead[]
+}
+
+enum Role {
+  HR
+  TEAMLEAD
+  INTERN
+}
+
+enum Status {
+  NOT_STARTED
+  HAS_STARTED
+  DONE
+  EXPIRED
+}
+
+model Stage {
+  id        String    @id @default(uuid())
+  number    Int
+  name      String
+  createdAt DateTime  @default(now())
+  startedAt DateTime?
+  endedAt   DateTime?
+
+  status Status
+  tasks  Task[]
+
+  teamleadId String?
+  internId   String
+
+  createdBy  Teamlead? @relation(fields: [teamleadId], references: [id])
+  createdFor Intern    @relation(fields: [internId], references: [id])
+}
+
+model Task {
+  id        String    @id @default(uuid())
+  number    Int
+  name      String
+  desc      String?
+  deadline  DateTime
+  status    Status
+  createdAt DateTime  @default(now())
+  startedAt DateTime?
+  endedAt   DateTime?
+
+  attachments Attachment[]
+  comments    Comment[]
+  stageId     String
+
+  stage Stage @relation(fields: [stageId], references: [id], onDelete: Cascade)
+}
+
+model Attachment {
+  id  String @id @default(uuid())
+  url String
+
+  taskId String?
+
+  task Task? @relation(fields: [taskId], references: [id])
+}
+
+model Comment {
+  id      String @id @default(uuid())
+  content String
+
+  taskId     String?
+  senderId   String
+  senderRole Role
+  task       Task?   @relation(fields: [taskId], references: [id])
+}
+
+model Chat {
+  id        String   @id @default(uuid())
+  groupName String?
+  createdAt DateTime @default(now())
+
+  messages     Message[]
+  participants ChatParticipant[]
+}
+
+model ChatParticipant {
+  id     String @id @default(uuid())
+  chatId String
+  userId String
+  role   Role
+  chat   Chat   @relation(fields: [chatId], references: [id], onDelete: Cascade)
+}
+
+model Message {
+  id        String   @id @default(uuid())
+  content   String // URL файла или текст сообщения
+  fileName  String? // Оригинальное имя файла (опционально)
+  createdAt DateTime @default(now())
+
+  chatId String
+
+  senderId   String
+  senderRole Role
+
+  chat Chat @relation(fields: [chatId], references: [id], onDelete: Cascade)
+}
+
+model Template {
+  id        String   @id @default(uuid())
+  name      String
+  color     String
+  createdAt DateTime @default(now())
+}
