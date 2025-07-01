@@ -49,7 +49,7 @@ app.register(taskRoutes, { prefix: "/api/stages" });
 app.register(downloadRoutes, { prefix: "/api" });
 const start = async () => {
     try {
-        await app.listen({ port: 8080 });
+        await app.listen({ port: 5050 });
     }
     catch (err) {
         console.error(err);

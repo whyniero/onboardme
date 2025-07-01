@@ -1,13 +1,12 @@
 import { Server } from "socket.io";
 import { createServer } from "http";
-import { config } from "dotenv";
-config();
 import prisma from "../src/utils/prisma.js";
 const httpServer = createServer();
 const io = new Server(httpServer, {
     cors: {
-        origin: ["http://localhost:3000", "http://localhost:8080"],
-        methods: ["GET", "POST", "PUT", "DELETE"],
+        // Первое - фронтенд, второе - бекенд
+        origin: ["http://localhost:3000", "http://localhost:5050"],
+        methods: ["OPTIONS", "GET", "POST", "PUT", "DELETE"],
     },
 });
 // Хранилище онлайн-пользователей с массивом socketId для одного userId
@@ -27,9 +26,9 @@ const addUser = (userId, socketId) => {
 const removeUser = (socketId) => {
     onlineUsers = onlineUsers
         .map((u) => {
-        u.socketIds = u.socketIds.filter((id) => id !== socketId);
-        return u;
-    })
+            u.socketIds = u.socketIds.filter((id) => id !== socketId);
+            return u;
+        })
         .filter((u) => u.socketIds.length > 0);
     console.log("Online users after disconnect:", onlineUsers);
 };
