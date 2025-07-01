@@ -414,3 +414,211 @@
 2025-07-01T14:07:15:   address: '::',
 2025-07-01T14:07:15:   port: 4000
 2025-07-01T14:07:15: }
+2025-07-01T14:39:52: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:52:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:52:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:52:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:52:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:52:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:52:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:52:   code: 'EADDRINUSE',
+2025-07-01T14:39:52:   errno: -4091,
+2025-07-01T14:39:52:   syscall: 'listen',
+2025-07-01T14:39:52:   address: '::',
+2025-07-01T14:39:52:   port: 4000
+2025-07-01T14:39:52: }
+2025-07-01T14:39:52: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:52:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:52:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:52:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:52:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:52:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:52:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:52:   code: 'EADDRINUSE',
+2025-07-01T14:39:52:   errno: -4091,
+2025-07-01T14:39:52:   syscall: 'listen',
+2025-07-01T14:39:52:   address: '::',
+2025-07-01T14:39:52:   port: 4000
+2025-07-01T14:39:52: }
+2025-07-01T14:39:52: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:52:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:52:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:52:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:52:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:52:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:52:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:52:   code: 'EADDRINUSE',
+2025-07-01T14:39:52:   errno: -4091,
+2025-07-01T14:39:52:   syscall: 'listen',
+2025-07-01T14:39:52:   address: '::',
+2025-07-01T14:39:52:   port: 4000
+2025-07-01T14:39:52: }
+2025-07-01T14:39:53: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:53:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:53:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:53:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:53:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:53:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:53:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:53:   code: 'EADDRINUSE',
+2025-07-01T14:39:53:   errno: -4091,
+2025-07-01T14:39:53:   syscall: 'listen',
+2025-07-01T14:39:53:   address: '::',
+2025-07-01T14:39:53:   port: 4000
+2025-07-01T14:39:53: }
+2025-07-01T14:39:53: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:53:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:53:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:53:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:53:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:53:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:53:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:53:   code: 'EADDRINUSE',
+2025-07-01T14:39:53:   errno: -4091,
+2025-07-01T14:39:53:   syscall: 'listen',
+2025-07-01T14:39:53:   address: '::',
+2025-07-01T14:39:53:   port: 4000
+2025-07-01T14:39:53: }
+2025-07-01T14:39:53: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:53:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:53:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:53:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:53:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:53:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:53:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:53:   code: 'EADDRINUSE',
+2025-07-01T14:39:53:   errno: -4091,
+2025-07-01T14:39:53:   syscall: 'listen',
+2025-07-01T14:39:53:   address: '::',
+2025-07-01T14:39:53:   port: 4000
+2025-07-01T14:39:53: }
+2025-07-01T14:39:54: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:54:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:54:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:54:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:54:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:54:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:54:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:54:   code: 'EADDRINUSE',
+2025-07-01T14:39:54:   errno: -4091,
+2025-07-01T14:39:54:   syscall: 'listen',
+2025-07-01T14:39:54:   address: '::',
+2025-07-01T14:39:54:   port: 4000
+2025-07-01T14:39:54: }
+2025-07-01T14:39:54: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:54:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:54:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:54:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:54:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:54:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:54:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:54:   code: 'EADDRINUSE',
+2025-07-01T14:39:54:   errno: -4091,
+2025-07-01T14:39:54:   syscall: 'listen',
+2025-07-01T14:39:54:   address: '::',
+2025-07-01T14:39:54:   port: 4000
+2025-07-01T14:39:54: }
+2025-07-01T14:39:54: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:54:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:54:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:54:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:54:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:54:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:54:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:54:   code: 'EADDRINUSE',
+2025-07-01T14:39:54:   errno: -4091,
+2025-07-01T14:39:54:   syscall: 'listen',
+2025-07-01T14:39:54:   address: '::',
+2025-07-01T14:39:54:   port: 4000
+2025-07-01T14:39:54: }
+2025-07-01T14:39:55: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:55:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:55:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:55:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:55:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:55:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:55:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:55:   code: 'EADDRINUSE',
+2025-07-01T14:39:55:   errno: -4091,
+2025-07-01T14:39:55:   syscall: 'listen',
+2025-07-01T14:39:55:   address: '::',
+2025-07-01T14:39:55:   port: 4000
+2025-07-01T14:39:55: }
+2025-07-01T14:39:55: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:55:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:55:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:55:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:55:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:55:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:55:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:55:   code: 'EADDRINUSE',
+2025-07-01T14:39:55:   errno: -4091,
+2025-07-01T14:39:55:   syscall: 'listen',
+2025-07-01T14:39:55:   address: '::',
+2025-07-01T14:39:55:   port: 4000
+2025-07-01T14:39:55: }
+2025-07-01T14:39:55: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:55:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:55:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:55:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:55:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:55:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:55:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:55:   code: 'EADDRINUSE',
+2025-07-01T14:39:55:   errno: -4091,
+2025-07-01T14:39:55:   syscall: 'listen',
+2025-07-01T14:39:55:   address: '::',
+2025-07-01T14:39:55:   port: 4000
+2025-07-01T14:39:55: }
+2025-07-01T14:39:56: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:56:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:56:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:56:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:56:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:56:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:56:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:56:   code: 'EADDRINUSE',
+2025-07-01T14:39:56:   errno: -4091,
+2025-07-01T14:39:56:   syscall: 'listen',
+2025-07-01T14:39:56:   address: '::',
+2025-07-01T14:39:56:   port: 4000
+2025-07-01T14:39:56: }
+2025-07-01T14:39:56: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:56:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:56:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:56:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:56:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:56:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:56:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:56:   code: 'EADDRINUSE',
+2025-07-01T14:39:56:   errno: -4091,
+2025-07-01T14:39:56:   syscall: 'listen',
+2025-07-01T14:39:56:   address: '::',
+2025-07-01T14:39:56:   port: 4000
+2025-07-01T14:39:56: }
+2025-07-01T14:39:56: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:56:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:56:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:56:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:56:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:56:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:56:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:56:   code: 'EADDRINUSE',
+2025-07-01T14:39:56:   errno: -4091,
+2025-07-01T14:39:56:   syscall: 'listen',
+2025-07-01T14:39:56:   address: '::',
+2025-07-01T14:39:56:   port: 4000
+2025-07-01T14:39:56: }
+2025-07-01T14:39:57: Error: listen EADDRINUSE: address already in use :::4000
+2025-07-01T14:39:57:     at Server.setupListenHandle [as _listen2] (node:net:1904:16)
+2025-07-01T14:39:57:     at listenInCluster (node:net:1961:12)
+2025-07-01T14:39:57:     at Server.listen (node:net:2063:7)
+2025-07-01T14:39:57:     at file:///C:/Users/Alexander/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/%D0%9F%D0%9F5_3%D0%BA%D1%83%D1%80%D1%81/onboard-test/backend/dist/socket/server.js:133:12
+2025-07-01T14:39:57:     at ModuleJob.run (node:internal/modules/esm/module_job:262:25)
+2025-07-01T14:39:57:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:485:26) {
+2025-07-01T14:39:57:   code: 'EADDRINUSE',
+2025-07-01T14:39:57:   errno: -4091,
+2025-07-01T14:39:57:   syscall: 'listen',
+2025-07-01T14:39:57:   address: '::',
+2025-07-01T14:39:57:   port: 4000
+2025-07-01T14:39:57: }

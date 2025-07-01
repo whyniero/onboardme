@@ -11,3 +11,84 @@
 2025-07-01T14:15:49:     socketIds: [ '0M59HHHcu5-GQnCTAAAH' ]
 2025-07-01T14:15:49:   }
 2025-07-01T14:15:49: ]
+2025-07-01T14:39:41: Socket server running on :4000
+2025-07-01T14:39:42: Socket connected: 7NovxAavoqmwA8f3AAAC
+2025-07-01T14:39:42: Socket connected: _EihS7ykvpZ_ST3eAAAD
+2025-07-01T14:39:45: Socket connected: uDPmPJebVwrjGi6HAAAF
+2025-07-01T14:39:45:  Online users updated: [
+2025-07-01T14:39:45:   {
+2025-07-01T14:39:45:     userId: '78e5bcc6-9802-460a-bb63-04a463e08489',
+2025-07-01T14:39:45:     socketIds: [ 'uDPmPJebVwrjGi6HAAAF' ]
+2025-07-01T14:39:45:   }
+2025-07-01T14:39:45: ]
+2025-07-01T14:41:06: Socket server running on :4000
+2025-07-01T14:41:07: Socket connected: dKRqtXUVw0fmX-WGAAAC
+2025-07-01T14:41:07: Socket connected: Sd-lEVq6a9RGhKHNAAAD
+2025-07-01T14:41:07: Socket connected: -iqjXU4wRENYH9vMAAAF
+2025-07-01T14:41:07:  Online users updated: [
+2025-07-01T14:41:07:   {
+2025-07-01T14:41:07:     userId: '78e5bcc6-9802-460a-bb63-04a463e08489',
+2025-07-01T14:41:07:     socketIds: [ '-iqjXU4wRENYH9vMAAAF' ]
+2025-07-01T14:41:07:   }
+2025-07-01T14:41:07: ]
+2025-07-01T14:41:10: Socket disconnected: -iqjXU4wRENYH9vMAAAF
+2025-07-01T14:41:10: Online users after disconnect: []
+2025-07-01T14:41:10: Socket connected: gDv1dJLeKmTqiuChAAAH
+2025-07-01T14:42:09: Socket connected: y8ripXdbSwqg9b3yAAAJ
+2025-07-01T14:42:25: Socket disconnected: y8ripXdbSwqg9b3yAAAJ
+2025-07-01T14:42:25: Online users after disconnect: []
+2025-07-01T14:54:29: Socket server running on :4000
+2025-07-01T14:54:30: Socket connected: _3hsxoA-OY87FP94AAAB
+2025-07-01T14:54:30:  Online users updated: [
+2025-07-01T14:54:30:   {
+2025-07-01T14:54:30:     userId: '78e5bcc6-9802-460a-bb63-04a463e08489',
+2025-07-01T14:54:30:     socketIds: [ '_3hsxoA-OY87FP94AAAB' ]
+2025-07-01T14:54:30:   }
+2025-07-01T14:54:30: ]
+2025-07-01T14:54:30: Socket connected: R_dPbugfHoy3IPzzAAAE
+2025-07-01T14:54:30: Socket connected: XS-qG18kAma-f-u3AAAF
+2025-07-01T14:54:59: Socket connected: KadAD7NZp0ITmZ9jAAAH
+2025-07-01T14:55:02: Socket disconnected: _3hsxoA-OY87FP94AAAB
+2025-07-01T14:55:02: Online users after disconnect: []
+2025-07-01T14:55:02: Socket connected: ILPTgTCRjklb3iX0AAAJ
+2025-07-01T14:55:04: Socket disconnected: ILPTgTCRjklb3iX0AAAJ
+2025-07-01T14:55:04: Online users after disconnect: []
+2025-07-01T14:55:04: Socket connected: _dJi5UanDHQzNh55AAAL
+2025-07-01T14:55:04:  Online users updated: [
+2025-07-01T14:55:04:   {
+2025-07-01T14:55:04:     userId: '78e5bcc6-9802-460a-bb63-04a463e08489',
+2025-07-01T14:55:04:     socketIds: [ '_dJi5UanDHQzNh55AAAL' ]
+2025-07-01T14:55:04:   }
+2025-07-01T14:55:04: ]
+2025-07-01T14:55:23: Socket disconnected: _dJi5UanDHQzNh55AAAL
+2025-07-01T14:55:23: Online users after disconnect: []
+2025-07-01T14:56:03: Socket connected: EjXaKPQ9zknOGIARAAAN
+2025-07-01T15:11:09: Socket disconnected: KadAD7NZp0ITmZ9jAAAH
+2025-07-01T15:11:09: Online users after disconnect: []
+2025-07-01T15:23:37: Socket disconnected: R_dPbugfHoy3IPzzAAAE
+2025-07-01T15:23:37: Online users after disconnect: []
+2025-07-01T15:23:37: Socket disconnected: XS-qG18kAma-f-u3AAAF
+2025-07-01T15:23:37: Online users after disconnect: []
+2025-07-01T15:23:38: Socket connected: 16QwcUsdSniPiwHjAAAP
+2025-07-01T15:23:38: Socket connected: h5UfuJLdUJG87o56AAAR
+2025-07-01T15:23:39: Socket connected: NTSyLoeF_IqapfTUAAAT
+2025-07-01T15:23:39:  Online users updated: [
+2025-07-01T15:23:39:   {
+2025-07-01T15:23:39:     userId: 'b595a75c-aeb6-4681-9650-56d2a8ccbad0',
+2025-07-01T15:23:39:     socketIds: [ 'NTSyLoeF_IqapfTUAAAT' ]
+2025-07-01T15:23:39:   }
+2025-07-01T15:23:39: ]
+2025-07-01T15:32:35: Socket disconnected: 16QwcUsdSniPiwHjAAAP
+2025-07-01T15:32:35: Online users after disconnect: [
+2025-07-01T15:32:35:   {
+2025-07-01T15:32:35:     userId: 'b595a75c-aeb6-4681-9650-56d2a8ccbad0',
+2025-07-01T15:32:35:     socketIds: [ 'NTSyLoeF_IqapfTUAAAT' ]
+2025-07-01T15:32:35:   }
+2025-07-01T15:32:35: ]
+2025-07-01T15:32:35: Socket disconnected: h5UfuJLdUJG87o56AAAR
+2025-07-01T15:32:35: Online users after disconnect: [
+2025-07-01T15:32:35:   {
+2025-07-01T15:32:35:     userId: 'b595a75c-aeb6-4681-9650-56d2a8ccbad0',
+2025-07-01T15:32:35:     socketIds: [ 'NTSyLoeF_IqapfTUAAAT' ]
+2025-07-01T15:32:35:   }
+2025-07-01T15:32:35: ]

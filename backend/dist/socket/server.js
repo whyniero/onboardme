@@ -5,7 +5,7 @@ const httpServer = createServer();
 const io = new Server(httpServer, {
     cors: {
         // Первое - фронтенд, второе - бекенд
-        origin: ["http://localhost:3000", "http://localhost:5050"],
+        origin: [process.env.CORS_ORIGIN || "http://localhost:3000", process.env.CORS_ORIGIN_FOR_WS || "http://localhost:5050"],
         methods: ["OPTIONS", "GET", "POST", "PUT", "DELETE"],
     },
 });
@@ -130,4 +130,4 @@ io.on("connection", (socket) => {
         io.emit("getOnlineUsers", onlineUsers); // Обновляем список после отключения
     });
 });
-httpServer.listen(4000, () => console.log("Socket server running on :4000"));
+httpServer.listen(process.env.PORT_WS || 4000, () => console.log(`Socket server running on :${process.env.PORT_WS || 4000}`));
