@@ -1,0 +1,13 @@
+2025-07-01T14:14:25: Socket server running on :4000
+2025-07-01T14:14:26: Socket connected: Xau6J6KB94wRUQ5zAAAC
+2025-07-01T14:14:26: Socket connected: o_YQDPD9m406GOkOAAAD
+2025-07-01T14:15:04: Socket connected: pXeKG43is6DLEGZZAAAF
+2025-07-01T14:15:47: Socket disconnected: pXeKG43is6DLEGZZAAAF
+2025-07-01T14:15:47: Online users after disconnect: []
+2025-07-01T14:15:49: Socket connected: 0M59HHHcu5-GQnCTAAAH
+2025-07-01T14:15:49:  Online users updated: [
+2025-07-01T14:15:49:   {
+2025-07-01T14:15:49:     userId: '78e5bcc6-9802-460a-bb63-04a463e08489',
+2025-07-01T14:15:49:     socketIds: [ '0M59HHHcu5-GQnCTAAAH' ]
+2025-07-01T14:15:49:   }
+2025-07-01T14:15:49: ]

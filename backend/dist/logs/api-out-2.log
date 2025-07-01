@@ -1,0 +1,94 @@
+2025-07-01T14:07:11: {"level":30,"time":1751368031353,"pid":17996,"hostname":"DESKTOP-745ESNC","msg":"Server listening at http://127.0.0.1:5050"}
+2025-07-01T14:07:11: {"level":30,"time":1751368031356,"pid":17996,"hostname":"DESKTOP-745ESNC","msg":"Server listening at http://[::1]:5050"}
+2025-07-01T14:07:19: {"level":30,"time":1751368039473,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-1","req":{"method":"GET","url":"/api/chats/for-user/78e5bcc6-9802-460a-bb63-04a463e08489","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":53921},"msg":"incoming request"}
+2025-07-01T14:07:19: {"level":30,"time":1751368039500,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-1","res":{"statusCode":200},"responseTime":26.875899999868125,"msg":"request completed"}
+2025-07-01T14:07:19: {"level":30,"time":1751368039575,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-2","req":{"method":"GET","url":"/api/chats/9b49a3ee-2181-40ae-9101-057f269b5fae/messages","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":53921},"msg":"incoming request"}
+2025-07-01T14:07:19: {"level":30,"time":1751368039579,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-2","res":{"statusCode":200},"responseTime":4.288799999980256,"msg":"request completed"}
+2025-07-01T14:07:20: {"level":30,"time":1751368040520,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-3","req":{"method":"GET","url":"/api/positions","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":53921},"msg":"incoming request"}
+2025-07-01T14:07:20: {"level":30,"time":1751368040523,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-3","res":{"statusCode":200},"responseTime":3.0782999999355525,"msg":"request completed"}
+2025-07-01T14:07:21: {"level":30,"time":1751368041040,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-4","req":{"method":"GET","url":"/api/users/teamleads","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":53921},"msg":"incoming request"}
+2025-07-01T14:07:21: {"level":30,"time":1751368041047,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-4","res":{"statusCode":200},"responseTime":7.569700000109151,"msg":"request completed"}
+2025-07-01T14:07:45: {"level":30,"time":1751368065352,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-5","req":{"method":"GET","url":"/api/positions","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":53921},"msg":"incoming request"}
+2025-07-01T14:07:45: {"level":30,"time":1751368065356,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-5","res":{"statusCode":200},"responseTime":3.0746999999973923,"msg":"request completed"}
+2025-07-01T14:07:45: {"level":30,"time":1751368065710,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-6","req":{"method":"GET","url":"/api/chats/for-user/78e5bcc6-9802-460a-bb63-04a463e08489","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":53921},"msg":"incoming request"}
+2025-07-01T14:07:45: {"level":30,"time":1751368065718,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-6","res":{"statusCode":200},"responseTime":8.409900000086054,"msg":"request completed"}
+2025-07-01T14:07:46: {"level":30,"time":1751368066782,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-7","req":{"method":"GET","url":"/api/chats/for-user/78e5bcc6-9802-460a-bb63-04a463e08489","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":53921},"msg":"incoming request"}
+2025-07-01T14:07:46: {"level":30,"time":1751368066790,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-7","res":{"statusCode":200},"responseTime":8.171300000045449,"msg":"request completed"}
+2025-07-01T14:07:46: {"level":30,"time":1751368066807,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-8","req":{"method":"GET","url":"/api/chats/9b49a3ee-2181-40ae-9101-057f269b5fae/messages","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":53921},"msg":"incoming request"}
+2025-07-01T14:07:46: {"level":30,"time":1751368066811,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-8","res":{"statusCode":200},"responseTime":3.439699999988079,"msg":"request completed"}
+2025-07-01T14:11:18: {"level":30,"time":1751368278796,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-9","req":{"method":"OPTIONS","url":"/api/auth/login","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54029},"msg":"incoming request"}
+2025-07-01T14:11:18: {"level":30,"time":1751368278797,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-9","res":{"statusCode":204},"responseTime":0.7645000000484288,"msg":"request completed"}
+2025-07-01T14:11:35: {"level":30,"time":1751368295662,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-a","req":{"method":"OPTIONS","url":"/api/auth/login","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54029},"msg":"incoming request"}
+2025-07-01T14:11:35: {"level":30,"time":1751368295662,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-a","res":{"statusCode":204},"responseTime":0.3055000000167638,"msg":"request completed"}
+2025-07-01T14:11:57: {"level":30,"time":1751368317220,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-b","req":{"method":"OPTIONS","url":"/api/auth/login","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54029},"msg":"incoming request"}
+2025-07-01T14:11:57: {"level":30,"time":1751368317220,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-b","res":{"statusCode":204},"responseTime":0.2391999999526888,"msg":"request completed"}
+2025-07-01T14:12:04: {"level":30,"time":1751368324032,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-c","req":{"method":"OPTIONS","url":"/api/auth/login","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54029},"msg":"incoming request"}
+2025-07-01T14:12:04: {"level":30,"time":1751368324032,"pid":17996,"hostname":"DESKTOP-745ESNC","reqId":"req-c","res":{"statusCode":204},"responseTime":0.22699999995529652,"msg":"request completed"}
+2025-07-01T14:14:26: {"level":30,"time":1751368466140,"pid":3292,"hostname":"DESKTOP-745ESNC","msg":"Server listening at http://127.0.0.1:5050"}
+2025-07-01T14:14:26: {"level":30,"time":1751368466142,"pid":3292,"hostname":"DESKTOP-745ESNC","msg":"Server listening at http://[::1]:5050"}
+2025-07-01T14:14:32: {"level":30,"time":1751368472199,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-1","req":{"method":"OPTIONS","url":"/api/auth/login","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54087},"msg":"incoming request"}
+2025-07-01T14:14:32: {"level":30,"time":1751368472202,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-1","res":{"statusCode":204},"responseTime":3.0115000000223517,"msg":"request completed"}
+2025-07-01T14:14:32: {"level":30,"time":1751368472210,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-2","req":{"method":"POST","url":"/api/auth/login","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54088},"msg":"incoming request"}
+2025-07-01T14:14:32: {"level":30,"time":1751368472232,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-2","res":{"statusCode":400},"responseTime":21.696699999971315,"msg":"request completed"}
+2025-07-01T14:14:41: {"level":30,"time":1751368481530,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-3","req":{"method":"OPTIONS","url":"/api/auth/login","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54087},"msg":"incoming request"}
+2025-07-01T14:14:41: {"level":30,"time":1751368481531,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-3","res":{"statusCode":204},"responseTime":0.5438000001013279,"msg":"request completed"}
+2025-07-01T14:14:41: {"level":30,"time":1751368481532,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-4","req":{"method":"POST","url":"/api/auth/login","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54088},"msg":"incoming request"}
+2025-07-01T14:14:41: {"level":30,"time":1751368481598,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-4","res":{"statusCode":200},"responseTime":65.39930000016466,"msg":"request completed"}
+2025-07-01T14:14:46: {"level":30,"time":1751368486857,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-5","req":{"method":"GET","url":"/api/users/teamleads","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54088},"msg":"incoming request"}
+2025-07-01T14:14:46: {"level":30,"time":1751368486865,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-5","res":{"statusCode":200},"responseTime":8.119999999878928,"msg":"request completed"}
+2025-07-01T14:14:47: {"level":30,"time":1751368487511,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-6","req":{"method":"GET","url":"/api/positions","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54088},"msg":"incoming request"}
+2025-07-01T14:14:47: {"level":30,"time":1751368487515,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-6","res":{"statusCode":200},"responseTime":3.5049000000581145,"msg":"request completed"}
+2025-07-01T14:14:48: {"level":30,"time":1751368488524,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-7","req":{"method":"GET","url":"/api/chats/for-user/78e5bcc6-9802-460a-bb63-04a463e08489","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54088},"msg":"incoming request"}
+2025-07-01T14:14:48: {"level":30,"time":1751368488538,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-7","res":{"statusCode":200},"responseTime":12.949899999890476,"msg":"request completed"}
+2025-07-01T14:14:58: {"level":30,"time":1751368498541,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-8","req":{"method":"GET","url":"/api/users/interns","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54088},"msg":"incoming request"}
+2025-07-01T14:14:58: {"level":30,"time":1751368498549,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-8","res":{"statusCode":200},"responseTime":7.999799999874085,"msg":"request completed"}
+2025-07-01T14:14:59: {"level":30,"time":1751368499690,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-9","req":{"method":"GET","url":"/api/stages","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54088},"msg":"incoming request"}
+2025-07-01T14:14:59: {"level":30,"time":1751368499697,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-9","res":{"statusCode":200},"responseTime":7.460399999981746,"msg":"request completed"}
+2025-07-01T14:15:00: {"level":30,"time":1751368500404,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-a","req":{"method":"GET","url":"/api/users/interns","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54088},"msg":"incoming request"}
+2025-07-01T14:15:00: {"level":30,"time":1751368500410,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-a","res":{"statusCode":200},"responseTime":5.343800000147894,"msg":"request completed"}
+2025-07-01T14:15:01: {"level":30,"time":1751368501689,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-b","req":{"method":"GET","url":"/api/users/interns/8c666f4d-447e-41d1-9ac7-0c104fc8fc4e","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54088},"msg":"incoming request"}
+2025-07-01T14:15:01: {"level":30,"time":1751368501693,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-b","res":{"statusCode":200},"responseTime":3.893699999898672,"msg":"request completed"}
+2025-07-01T14:15:03: {"level":30,"time":1751368503387,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-c","req":{"method":"GET","url":"/api/chats/for-user/78e5bcc6-9802-460a-bb63-04a463e08489","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54088},"msg":"incoming request"}
+2025-07-01T14:15:03: {"level":30,"time":1751368503395,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-c","res":{"statusCode":200},"responseTime":7.90320000005886,"msg":"request completed"}
+2025-07-01T14:15:04: {"level":30,"time":1751368504089,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-d","req":{"method":"GET","url":"/api/chats/for-user/78e5bcc6-9802-460a-bb63-04a463e08489","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54088},"msg":"incoming request"}
+2025-07-01T14:15:04: {"level":30,"time":1751368504096,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-d","res":{"statusCode":200},"responseTime":7.7066999999806285,"msg":"request completed"}
+2025-07-01T14:15:04: {"level":30,"time":1751368504114,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-e","req":{"method":"GET","url":"/api/chats/9b49a3ee-2181-40ae-9101-057f269b5fae/messages","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54088},"msg":"incoming request"}
+2025-07-01T14:15:04: {"level":30,"time":1751368504118,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-e","res":{"statusCode":200},"responseTime":3.7634000000543892,"msg":"request completed"}
+2025-07-01T14:15:46: {"level":30,"time":1751368546151,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-f","req":{"method":"POST","url":"/api/chats/9b49a3ee-2181-40ae-9101-057f269b5fae/messages/upload","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54088},"msg":"incoming request"}
+2025-07-01T14:15:46: Request headers: {
+2025-07-01T14:15:46:   host: 'localhost:5050',
+2025-07-01T14:15:46:   'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:140.0) Gecko/20100101 Firefox/140.0',
+2025-07-01T14:15:46:   accept: 'application/json, text/plain, */*',
+2025-07-01T14:15:46:   'accept-language': 'en-US,en;q=0.5',
+2025-07-01T14:15:46:   'accept-encoding': 'gzip, deflate, br, zstd',
+2025-07-01T14:15:46:   'content-type': 'multipart/form-data; boundary=----geckoformboundary827da7c2e27e09881bae055f2a09cfc0',
+2025-07-01T14:15:46:   'content-length': '1957754',
+2025-07-01T14:15:46:   origin: 'http://localhost:3000',
+2025-07-01T14:15:46:   connection: 'keep-alive',
+2025-07-01T14:15:46:   referer: 'http://localhost:3000/',
+2025-07-01T14:15:46:   cookie: 'token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI3OGU1YmNjNi05ODAyLTQ2MGEtYmI2My0wNGE0NjNlMDg0ODkiLCJyb2xlIjoiSFIiLCJlbWFpbCI6ImFsZXhAZ21haWwuY29tIiwiaWF0IjoxNzUxMzY4NDgxfQ.PUVzl2Ai4m8qCZEeSahcywS3UdN5kkwa0dfhuEov0A8.RIEUuYea91l6Xmam7BbQmvo15ttKoodYBvfOgFJN3ek',
+2025-07-01T14:15:46:   'sec-fetch-dest': 'empty',
+2025-07-01T14:15:46:   'sec-fetch-mode': 'cors',
+2025-07-01T14:15:46:   'sec-fetch-site': 'same-site',
+2025-07-01T14:15:46:   priority: 'u=0'
+2025-07-01T14:15:46: }
+2025-07-01T14:15:46: Request body (summary): {
+2025-07-01T14:15:46:   chatId: '9b49a3ee-2181-40ae-9101-057f269b5fae',
+2025-07-01T14:15:46:   senderId: '78e5bcc6-9802-460a-bb63-04a463e08489',
+2025-07-01T14:15:46:   senderRole: 'HR',
+2025-07-01T14:15:46:   fileName: 'IMG_0010.JPG',
+2025-07-01T14:15:46:   fileSize: 1957134
+2025-07-01T14:15:46: }
+2025-07-01T14:15:46: Upload directory: C:\Users\Alexander\OneDrive\Рабочий стол\ПП5_3курс\onboard-test\backend\dist\uploads\chats
+2025-07-01T14:15:46: File path: C:\Users\Alexander\OneDrive\Рабочий стол\ПП5_3курс\onboard-test\backend\dist\uploads\chats\66f0549e-222a-442c-b7fa-ef4191c2659d.JPG
+2025-07-01T14:15:46: File written with _buf, size: 1957134 bytes
+2025-07-01T14:15:46: {"level":30,"time":1751368546188,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-f","res":{"statusCode":200},"responseTime":37.61080000014044,"msg":"request completed"}
+2025-07-01T14:15:47: {"level":30,"time":1751368547904,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-g","req":{"method":"GET","url":"/api/download/chats/66f0549e-222a-442c-b7fa-ef4191c2659d.JPG","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54117},"msg":"incoming request"}
+2025-07-01T14:15:47: {"level":30,"time":1751368547912,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-g","res":{"statusCode":200},"responseTime":7.548900000052527,"msg":"request completed"}
+2025-07-01T14:15:51: {"level":30,"time":1751368551751,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-h","req":{"method":"OPTIONS","url":"/api/chats/9b49a3ee-2181-40ae-9101-057f269b5fae/messages/75c1e9f6-ecaf-43fc-8006-b312b905ff39","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54087},"msg":"incoming request"}
+2025-07-01T14:15:51: {"level":30,"time":1751368551751,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-h","res":{"statusCode":204},"responseTime":0.26959999999962747,"msg":"request completed"}
+2025-07-01T14:15:51: {"level":30,"time":1751368551753,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-i","req":{"method":"DELETE","url":"/api/chats/9b49a3ee-2181-40ae-9101-057f269b5fae/messages/75c1e9f6-ecaf-43fc-8006-b312b905ff39","host":"localhost:5050","remoteAddress":"127.0.0.1","remotePort":54088},"msg":"incoming request"}
+2025-07-01T14:15:51: Delete request received for message ID: 75c1e9f6-ecaf-43fc-8006-b312b905ff39
+2025-07-01T14:15:51: Attempting to delete file at: C:\Users\Alexander\OneDrive\Рабочий стол\ПП5_3курс\onboard-test\backend\dist\uploads\chats\66f0549e-222a-442c-b7fa-ef4191c2659d.JPG
+2025-07-01T14:15:51: Файл удалён: C:\Users\Alexander\OneDrive\Рабочий стол\ПП5_3курс\onboard-test\backend\dist\uploads\chats\66f0549e-222a-442c-b7fa-ef4191c2659d.JPG
+2025-07-01T14:15:51: {"level":30,"time":1751368551777,"pid":3292,"hostname":"DESKTOP-745ESNC","reqId":"req-i","res":{"statusCode":200},"responseTime":24.438499999931082,"msg":"request completed"}
